@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by chingwenj</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app">
+  <div class="control">
+    <input type="checkbox" v-model="gather"/>
+    <input type="checkbox" v-for="card in cards" v-model="card.open"/>
+  </div>
+  <div class="cards" :class="{gather: gather}">
+    <div class="card" v-for="card in cards" :class="{open: card.open}" :data-order="card.id"> 
+      <!--有':'代表v-bind屬性-->
+      <div class="face back"> </div>
+      <div class="face front">{{ getSymbol(card.label) }}</div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
