@@ -1,0 +1,48 @@
+body{
+  background-color: black;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+.divcanvas {
+  
+  /*position: relative;
+  display: inline-block;*/
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  bottom: 0%;
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  background-color: black;
+}
+canvas {
+  /*display: block;
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  width: 100vw;
+  height: 100vh;*/
+}
+.playpause {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  bottom: 0%;
+  width: 100vw;
+  height: 100vh;
+  font-size: 60px;
+  /*justify-content: center;
+  align-items: center;*/
+  color: rgba(255, 255, 255, 0.3);
+  transition: opacity 0.2s ease-in-out;
+}
+.playpausehide,
+.playpause:hover {
+  opacity: 0;
+}
+.iframe .divcanvas {
+  /*display: block;/*
+}
